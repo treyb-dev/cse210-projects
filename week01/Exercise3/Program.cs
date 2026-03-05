@@ -20,7 +20,7 @@ class Program
             {   
                 Console.Write("What is your guess? ");
                 guessNumber = int.Parse(Console.ReadLine());
-                count ++;
+                count += 1;
 
                 if (guessNumber > magicNumber)
                 {
