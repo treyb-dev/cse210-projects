@@ -7,7 +7,7 @@ class Program
         
         string playAgain = "yes";
 
-        while(playAgain == "yes")
+        while (playAgain == "yes")
         {
             Console.Write("What is the magic number? ");
             int magicNumber = int.Parse(Console.ReadLine());
@@ -20,7 +20,7 @@ class Program
             {   
                 Console.Write("What is your guess? ");
                 guessNumber = int.Parse(Console.ReadLine());
-                count += 1;
+                count ++;
 
                 if (guessNumber > magicNumber)
                 {
