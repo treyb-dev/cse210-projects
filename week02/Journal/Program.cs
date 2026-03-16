@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        // I exceeded the requirement by making each entry store both the current date and time 
+        // when it is created.
+
         Journal journal = new Journal();
         PromptGenerator promptGen = new PromptGenerator();
 
@@ -21,18 +24,17 @@ class Program
             Console.Write("Choose an option: ");
             choice = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(); // spacing for readability
+            Console.WriteLine();
 
             if (choice == 1)
             {
-                // Write Entry
                 string prompt = promptGen.GetRandomPrompt();
                 Console.WriteLine($"Prompt: {prompt}");
                 Console.Write("Your response: ");
                 string response = Console.ReadLine();
 
                 Entry entry = new Entry();
-                entry._dateTime = DateTime.Now.ToString("g"); // date + time
+                entry._dateTime = DateTime.Now.ToString("g"); 
                 entry._promptText = prompt;
                 entry._entryText = response;
 
